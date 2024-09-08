@@ -18,6 +18,9 @@ body {
 
 #center {
     text-align: center;
+    font-family: 'Chomsky', serif;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Content starts below the title */
