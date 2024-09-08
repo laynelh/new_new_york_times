@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chom';
-    src: url('/fonts/Chomsky-8MOa2.otf') format('opentype');
-    font-weight: normal;
+    src: url('/fonts/Chomsky.woff2') format('woff2');
+    font-weight: lighter;
     font-style: normal;
 }
 
