@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Chomsky';
+    font-family: 'Chom';
     src: url('/fonts/Chomsky-8MOa2.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -25,7 +25,7 @@ body {
 
 #center {
     text-align: center;
-    font-family: 'Chomsky', serif;
+    font-family: 'Chom', 'Times New Roman', serif, serif;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -33,10 +33,17 @@ body {
 /* Content starts below the title */
 .header,
 .article-container,
-.related-articles,
 .footer {
     padding-top: 20px; /* Adds space between sections */
     text-align: center;
+}
+
+.related-articles {
+    padding-top: 20px; /* Adds space between sections */
+    text-align: center;
+    width: 100%;  /* Makes the aside span the full width of the viewport */
+    margin: 0;
+    padding: 0;
 }
 
 /* Header Styles */
@@ -97,7 +104,7 @@ body {
 }
 
 .article-image img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
 }
 
