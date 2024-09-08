@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Chom';
-    src: url('/fonts/Chomsky.woff2') format('woff2');
+    src: url('/public/fonts/Chomsky.woff2') format('woff2');
     font-weight: lighter;
     font-style: normal;
 }
