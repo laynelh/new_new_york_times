@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Chelt";
+    src: url('/fonts/CheltenhamStdBookCondIt.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styles */
 body {
     font-family: 'Georgia', serif;
@@ -64,6 +71,7 @@ body {
 .nav a {
     color: #333;
     text-decoration: none;
+    font-family: 'Georgia', sans-serif;
     font-size: 16px;
 }
 
@@ -77,6 +85,7 @@ body {
     justify-content: center;
     padding: 40px 20px;
     background-color: #fff;
+    
 }
 
 .main-article {
@@ -85,17 +94,58 @@ body {
 }
 
 .article-title {
-    font-family: 'Times New Roman', serif;
-    font-size: 32px;
+    font-family: 'Chelt', serif;
+    font-size: 40px;
     margin-bottom: 10px;
     line-height: 1.3;
     color: #000;
+    max-width: 600px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.article-title-sub {
+    font-family: 'Georgia', serif;
+    font-size: 21px;
+    line-height: 1.3;
+    max-width: 600px;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .article-author {
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
+    margin-left: 12;
+    margin-right: 12%;
+}
+
+.author-profile {
+    margin-bottom: 0px; /* Space between the photo and the author info */
+    margin-left: 12%;
+}
+
+.author-profile-sub {
+    display: flex;
+    padding: 0;
+    margin-right: 71%;
+    /* width: 100vw; */
+
+}
+.author-profile-sub p {
+    margin-top: 10%;
+    /* margin-right: 50%; */
+    font-size: 15px;
+}
+
+
+.profile-photo {
+    width: 60px; /* Adjust the size of the profile photo */
+    height: 60px; /* Keep it square */
+    border-radius: 50%; /* Make the photo circular */
+    object-fit: cover; 
+    margin-right: 12%;
 }
 
 .article-image {
@@ -104,7 +154,7 @@ body {
 }
 
 .article-image img {
-    max-width: 95%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -116,10 +166,32 @@ body {
 
 .article-content p {
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.8;
-    margin-left: 10%;
-    margin-right: 10%
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 600px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+p a {
+    color: #4682B4; 
+    text-decoration: underline;
+}
+
+p a:visited {
+    color: #4682B4; 
+}
+
+p a:hover {
+    color: #2f4c69; 
+    text-decoration: none; 
+}
+
+@media screen and (max-width: 600px) {
+    .article-content p {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 /* Related Articles Styles */
@@ -158,11 +230,13 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff; /* Match the white background */
+    color: #666; /* Use a subtle grey for text */
     padding: 20px 0;
     text-align: center;
-    margin-top: auto;
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    font-size: 14px; /* Adjust font size to match */
+    border-top: 1px solid #e5e5e5; /* Subtle border at the top for separation */
 }
 
 .footer-content {
@@ -176,11 +250,26 @@ body {
 }
 
 .footer-nav a {
-    color: #fff;
+    color: #666; /* Match link color with footer text color */
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px; /* Increase spacing between links */
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .footer-nav a:hover {
     text-decoration: underline;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center; /* Align links to the center */
+    flex-wrap: wrap; /* Allow wrapping if there are many links */
+    gap: 15px; /* Even spacing between the links */
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #999; /* Lighter grey for copyright text */
 }
