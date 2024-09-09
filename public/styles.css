@@ -41,14 +41,14 @@ body {
 .header,
 .article-container,
 .footer {
-    padding-top: 20px; /* Adds space between sections */
+    padding-top: 20px; 
     text-align: center;
 }
 
 .related-articles {
-    padding-top: 20px; /* Adds space between sections */
+    padding-top: 20px; 
     text-align: center;
-    width: 100%;  /* Makes the aside span the full width of the viewport */
+    width: 100%;  
     margin: 0;
     padding: 0;
 }
@@ -90,7 +90,7 @@ body {
 
 .main-article {
     max-width: 800px;
-    text-align: left; /* Keep article text left aligned */
+    text-align: left; 
 }
 
 .article-title {
@@ -123,7 +123,7 @@ body {
 }
 
 .author-profile {
-    margin-bottom: 0px; /* Space between the photo and the author info */
+    margin-bottom: 0px; 
     margin-left: 12%;
 }
 
@@ -142,9 +142,9 @@ body {
 
 
 .profile-photo {
-    width: 60px; /* Adjust the size of the profile photo */
-    height: 60px; /* Keep it square */
-    border-radius: 50%; /* Make the photo circular */
+    width: 60px;
+    height: 60px; 
+    border-radius: 50%; 
     object-fit: cover; 
     margin-right: 12%;
 }
@@ -231,13 +231,13 @@ p a:hover {
 
 /* Footer Styles */
 .footer {
-    background-color: #fff; /* Match the white background */
-    color: #666; /* Use a subtle grey for text */
+    background-color: #fff; 
+    color: #666; 
     padding: 20px 0;
     text-align: center;
-    font-family: Arial, sans-serif; /* Use a clean, readable font */
-    font-size: 14px; /* Adjust font size to match */
-    border-top: 1px solid #e5e5e5; /* Subtle border at the top for separation */
+    font-family: Arial, sans-serif; 
+    font-size: 14px; 
+    border-top: 1px solid #e5e5e5; 
 }
 
 .footer-content {
@@ -251,9 +251,9 @@ p a:hover {
 }
 
 .footer-nav a {
-    color: #666; /* Match link color with footer text color */
+    color: #666; 
     text-decoration: none;
-    margin: 0 15px; /* Increase spacing between links */
+    margin: 0 15px; 
     font-size: 14px;
     font-weight: normal;
 }
@@ -264,13 +264,13 @@ p a:hover {
 
 .footer-nav {
     display: flex;
-    justify-content: center; /* Align links to the center */
-    flex-wrap: wrap; /* Allow wrapping if there are many links */
-    gap: 15px; /* Even spacing between the links */
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 15px; 
 }
 
 .copyright {
     margin-top: 15px;
     font-size: 12px;
-    color: #999; /* Lighter grey for copyright text */
+    color: #999;
 }
