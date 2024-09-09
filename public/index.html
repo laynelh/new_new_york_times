@@ -10,23 +10,46 @@
 
 <body>
 
-    <!-- Main Container to Center the Title -->
-    <div>
-        <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">New New York Times</a></h1>
+    <!-- Main Container for the Title -->
+    <div class="title-container">
+        <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">The New New York Times</a></h1>
     </div>
 
-    <!-- Header Section (now starts below the title) -->
+    <!-- Header Section with Fixed Navbar -->
     <header class="header">
-        <hr class="header-separator">
         <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">World</a>
-            <a href="#">Politics</a>
-            <a href="#">Business</a>
-            <a href="#">Technology</a>
-            <a href="#">Culture</a>
+            <!-- Main Sections -->
+            <div class="nav-section">
+                <a href="#" class="nav-link">U.S.</a>
+                <div class="dropdown-content">
+                    <a href="#">U.S. Politics</a>
+                    <a href="#">U.S. Economy</a>
+                </div>
+            </div>
+            <div class="nav-section">
+                <a href="#" class="nav-link">World</a>
+                <div class="dropdown-content">
+                    <a href="#">Asia</a>
+                    <a href="#">Europe</a>
+                </div>
+            </div>
+            <a href="#" class="nav-link">Business</a>
+            <a href="#" class="nav-link">Arts</a>
+            <a href="#" class="nav-link">Lifestyle</a>
+            <a href="#" class="nav-link">Opinion</a>
+
+            <!-- Separator -->
+            <span class="separator">|</span>
+
+            <!-- Secondary Sections -->
+            <a href="#" class="nav-link">Audio</a>
+            <a href="#" class="nav-link">Games</a>
+            <a href="#" class="nav-link">Cooking</a>
+            <a href="#" class="nav-link">Wirecutter</a>
+            <a href="#" class="nav-link">The Athletic</a>
         </nav>
     </header>
+
 
     <!-- Main Article Section -->
     <main class="article-container">
@@ -161,6 +184,8 @@
             </div>
         </article>
     </main>
+
+    <script src="script.js"></script>
 
     <aside class="related-articles">
         <h3>Related Articles</h3>

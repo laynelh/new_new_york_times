@@ -30,15 +30,23 @@ body {
     align-items: center;
 }
 
+.title-container {
+    text-align: center;
+    padding-top: 5px;
+    background-color: white;
+    position: relative;
+    z-index: 500;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
 #center {
     text-align: center;
     font-family: 'Chom', 'Times New Roman', serif, serif;
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
 /* Content starts below the title */
-.header,
 .article-container,
 .footer {
     padding-top: 20px; 
@@ -53,30 +61,86 @@ body {
     padding: 0;
 }
 
-/* Header Styles */
+
+/* General Nav Styling */
 .header {
-    padding: 0;
-    background-color: #fff;
+    padding: 10px;
+    padding-top: 10px; /* Adjust based on your needs */
+    margin-left: 0;  /* Set to 0 for better centering */
+    margin-right: 0; /* Set to 0 for better centering */
+    border-bottom: 4px double #ababab;
+    background-color: white;
+    position: relative; /* Header is initially not fixed */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: all 0.3s ease; /* Smooth transition for when it becomes fixed */
+    display: flex;  /* Flexbox to center contents */
+    justify-content: center;  /* Center items horizontally */
+    align-items: center; /* Vertically center items in the header */
+    width: 100%; /* Ensure header takes the full width of the page */
 }
 
-
-
+/* Centering and spacing for the nav bar */
 .nav {
-    display: inline-flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: auto;
+    display: flex;
+    justify-content: center;  /* Center all nav links */
+    align-items: center;
+    gap: 20px;  /* Add space between the links */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    flex-wrap: wrap; /* Allow wrapping of links on smaller screens */
+    width: auto; /* Adjust width dynamically based on the content */
 }
 
+/* Adjusting the nav links */
 .nav a {
-    color: #333;
     text-decoration: none;
-    font-family: 'Georgia', sans-serif;
-    font-size: 16px;
+    color: black;
+    padding: 5px 10px;
+    position: relative;
 }
 
+/* Hover effect with underline */
 .nav a:hover {
     text-decoration: underline;
+}
+
+/* Separator between sections */
+.separator {
+    margin: 0 15px;
+    color: #ccc;
+}
+
+/* Dropdown Menu Styling */
+.nav-section {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw; /* Full width of the viewport */
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+    z-index: 1; /* Ensures the dropdown stays above other content */
+    padding: 10px 0; /* Padding for dropdown content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Centers the text inside the dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-section:hover .dropdown-content {
+    display: block;
 }
 
 /* Main Article Styles */
