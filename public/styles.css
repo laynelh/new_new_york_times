@@ -33,7 +33,7 @@ body {
 #center {
     text-align: center;
     font-family: 'Chom', 'Times New Roman', serif, serif;
-    margin-top: 0;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 
@@ -102,6 +102,7 @@ body {
     max-width: 600px;
     margin-left: 12%;
     margin-right: 12%;
+    
 }
 
 .article-title-sub {
