@@ -23,3 +23,13 @@ window.addEventListener("scroll", function() {
         titleContainer.style.transform = "translateY(0)";
     }
 });
+
+// Get the menu icon and the nav links container
+const menuIcon = document.getElementById("menu-icon");
+const navLinks = document.querySelector(".nav");
+
+// Add event listener to the menu icon for the click event
+menuIcon.addEventListener("click", function() {
+    // Toggle the "active" class on the nav links container
+    navLinks.classList.toggle("active");
+});
