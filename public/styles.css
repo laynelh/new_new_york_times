@@ -280,6 +280,10 @@ body {
     font-size: 14px;
     color: #888;
     margin-top: 10px;
+    text-align: left;
+    margin-left: 12%;
+    margin-right: 12%;
+
 }
 
 .article-content p {
@@ -424,4 +428,15 @@ p a:hover {
     margin-top: 15px;
     font-size: 12px;
     color: #999;
+}
+
+.annotated-text {
+    border-left: 3px solid #ccc; /* Right border for annotation */
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-left: auto; 
+    margin: 15px 0; /* Space above and below the annotated section */
+    color: #7e7e7e; /* Text color */
+    font-style: italic; /* Optional: differentiate it */
+    font-size: 14px;
 }
