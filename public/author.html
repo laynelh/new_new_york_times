@@ -23,9 +23,19 @@
 
         body {
             font-family: Georgia, 'Times New Roman', Times, serif, 'Times New Roman', Times, serif;
-            margin: 0;
+            margin-left: 20%;
+            margin-right: 20%;
             padding: 0;
             background-color: #fff;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-bottom: 15px;
+            }
         }
 
         .title-section {
@@ -41,13 +51,14 @@
             position: relative;
             z-index: 500;
             transition: all 0.3s ease;
-            /* Smooth transition effect */
+            padding-bottom: 50px;
         }
 
         #center {
             text-align: center;
             font-family: 'Chom', 'Times New Roman', serif, serif;
             margin-top: 0;
+            font-size: 25px;
             margin-bottom: 0;
         }
 
@@ -62,31 +73,75 @@
             border-radius: 50%;
             width: 100px;
             height: 100px;
-            margin-right: 20px;
+            margin-right: 40px;
+            margin-bottom: 80px;
         }
 
         .profile-header h1 {
+            font-family: 'Georgia', serif;
+            font-weight: lighter;
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.4em;
             line-height: 1.2;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
         }
 
         .profile-header p {
-            font-size: 1.1em;
+            font-family: "Georgia", serif;
+            font-size: 1.3em;
             color: #555;
             margin: 5px 0 0;
+            letter-spacing: 0.6px;
+            font-weight: 100;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .profile-header {
+                display: block;
+                /* Stack elements */
+                text-align: center;
+                /* Center-align name and description */
+            }
+
+            .profile-header img {
+                margin: 0 auto 20px;
+                /* Center image and add margin below it */
+            }
+
+            .profile-header h1 {
+                font-size: 2em;
+                /* Adjust font size if necessary for smaller screens */
+                margin-bottom: 10px;
+                /* Space between name and description */
+            }
+
+            .profile-header p {
+                font-size: 1.2em;
+                /* Slightly smaller text for mobile */
+                line-height: 1.5;
+            }
         }
 
         nav {
             margin-top: 20px;
-            text-align: center;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+
+        hr {
+            color: #999;
         }
 
         nav a {
             margin: 0 15px;
             font-size: 1em;
-            color: #0073e6;
+            color: black;
             text-decoration: none;
+            font-family: 'Georgia', serif;
             font-weight: bold;
         }
 
@@ -101,8 +156,17 @@
         }
 
         h2 {
-            font-size: 1.8em;
+            font-size: 1.4em;
             margin-top: 40px;
+            font-family: Helvetica, sans-serif, 'Times New Roman', Times, sans-serif;
+            letter-spacing: 0.1px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 40px;
+
+            letter-spacing: 0.1px;
         }
 
         .content-section {
@@ -116,7 +180,7 @@
         }
 
         .content-section a {
-            color: #0073e6;
+            color: #737373;
             text-decoration: none;
         }
 
@@ -129,10 +193,11 @@
             border-top: 1px solid #ddd;
             padding-top: 20px;
             margin-top: 20px;
+            margin-bottom: 50px;
         }
 
         .contact-info a {
-            color: #0073e6;
+            color: #868686;
             text-decoration: none;
         }
 
@@ -153,16 +218,38 @@
 
         .featured h2,
         .latest h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.5em;
-            font-weight: bold;
             margin-bottom: 20px;
+        }
+
+        .featured a,
+        .latest a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 100;
+            letter-spacing: 0.5px;
+        }
+
+        .featured a:hover,
+        .latest a:hover {
+            text-decoration: underline;
+        }
+
+        .article-text-date {
+            /* Fixed width for the date */
+            padding-right: 70px;
+            /* Space between date and content */
+            text-align: left;
+            /* Align text to the right */
         }
 
         .article-card {
             display: inline-block;
-            width: 48%;
+            width: 45%;
             vertical-align: top;
             margin-bottom: 20px;
+            padding: 5px;
         }
 
         .article-card img {
@@ -176,16 +263,24 @@
         }
 
         .article-card p {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #555;
         }
 
         .latest-article {
+            max-width: 100%;
             margin-bottom: 30px;
             border-top: 1px solid #ddd;
             padding-top: 20px;
             display: flex;
             align-items: flex-start;
+        }
+
+        .latest-article .article-date {
+            font-family: Arial, Helvetica, sans-serif, serif;
+            font-size: 0.75em;
+            color: #999;
+
         }
 
         .latest-article img {
@@ -200,19 +295,66 @@
         }
 
         .latest-article p {
-            font-size: 1em;
+            font-size: .9em;
             color: #555;
         }
 
         .article-date {
-            font-size: 0.85em;
-            color: #999;
+            font-family: 'Georgia', serif;
+            font-size: 0.8em;
+            /* Slightly smaller */
+            color: #666;
+            /* More gray */
             margin-bottom: 5px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 700px) {
+            .latest-article {
+                display: block;
+                /* Stack the elements */
+            }
+
+            .article-text-date {
+                width: 100%;
+                /* Full width for date */
+                text-align: left;
+                /* Align date to the left */
+                margin-bottom: 10px;
+                /* Space between date and text */
+            }
+
+            .latest-article img {
+                width: 50%;
+                /* Image takes full width */
+                margin-left: auto;
+                margin-right: auto;
+                /* Add margin above and below */
+            }
+
+            .article-text {
+                text-align: left;
+                /* Ensure the text is aligned left */
+            }
+        }
+
+        .back-arrow {
+            top: 40px;
+            left: 40px;
+            font-size: 1.5em;
+            color: rgb(182, 182, 182);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .back-arrow:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
+    <a class="back-arrow" onclick="window.history.back()"><</a>
     <div class="title-container">
         <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">The New New York
                 Times</a></h1>
@@ -226,16 +368,18 @@
                 articles in my class WRTG 3020-020 New York Times Topics. Taught by Anthony Abiragi.</p>
         </div>
     </div>
+    <hr>
     <nav>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Featured</a>
-        <a href="#">Latest</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#featured">Featured</a>
+        <a href="#latest">Latest</a>
     </nav>
+    <hr>
 
     <main>
 
-        <section class="content-section">
+        <section class="content-section" id="about">
             <h2>My Background</h2>
             <p>Before joning the New New York times 1 year ago, I was a student at the University of Colorado Boulder,
                 studying Computer Science with a minor in Business. I went on to work as a softawre engineer and
@@ -243,58 +387,69 @@
         </section>
 
         <!-- Contact Me Section -->
-        <section class="contact-info">
+        <section id="contact" class="contact-info">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:huntlayne@icloud.com">huntlayne1@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/layne-hunt-544a7816b/" target="_blank">Layne Hunt
                 </a></p>
             <p>Anonymous tips: <a href="https://www.nytimes.com/tips" target="_blank">nytimes.com/tips</a></p>
         </section>
+        <hr>
 
         <!-- Featured Section -->
-        <section class="featured">
-            <h2>Featured</h2>
+        <section id="featured" class="featured">
+            <h3>Featured</h3>
             <div class="article-card">
-                <img src="/images/candy-corn.jpg" alt="Candy Corn Article">
+                <img src="/images/smash.png" alt="Ai Weiwei annotation article">
                 <h3><a href="annotation.html">Annotation of 'Man Smashes Ai Weiwei's Porcelain Sculpture at Italian
                         Museum' By Derrick
                         Bryson Taylor</a></h3>
                 <p class="article-date">October 8, 2024</p>
             </div>
             <div class="article-card">
-                <img src="/images/spring-cleaning.jpg" alt="Spring Cleaning Article">
+                <img src="/images/mine.jpg" alt="Spring Cleaning Article">
                 <h3><a href="index.html">The Death of the Natural Diamond; How This Disappearance is Shaking the
                         World</a></h3>
-                <p class="article-date">September 15, 2071</p>
+                <p class="article-date">September 15, 2176</p>
             </div>
         </section>
 
+        <hr>
         <!-- Latest Section -->
-        <section class="latest">
-            <h2>Latest</h2>
+        <section class="latest" id="latest">
+            <h3>Latest</h3>
 
             <!-- First Latest Article -->
             <div class="latest-article">
-                <div class="article-text">
-                    <p class="article-date">Oct. 2, 2024</p>
-                    <h3><a href="#">‘Ring of Fire’ Solar Eclipse Will Be Visible in Parts of South America</a></h3>
-                    <p>Not everyone will be able to see the phenomenon, known as an annular eclipse, on Wednesday,
-                        though a partial solar eclipse may be visible in parts of Antarctica and Hawaii.</p>
-                    <p><strong>By DERRICK BRYSON TAYLOR</strong></p>
+                <div class="article-text article-text-date">
+                    <p class="article-date">Sept. 15, 2176</p>
                 </div>
-                <img src="/images/solar-eclipse.jpg" alt="Solar Eclipse Article">
+                <div class="article-text">
+
+                    <h3><a href="index.html">The Death of the Natural Diamond; How This Disappearance is Shaking the
+                            World</a></h3>
+                    <p>The last natural diamond was mined from the Earth's surface, what events led up to this moment
+                        and what does it mean for our environment.</p>
+                    <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;">By LAYNE HUNT</p>
+                </div>
+                <img src="/images/scepter.jpg" alt="Solar Eclipse Article">
             </div>
 
             <!-- Second Latest Article -->
             <div class="latest-article">
-                <div class="article-text">
-                    <p class="article-date">Sept. 29, 2024</p>
-                    <h3><a href="#">What We Know About Hurricane Helene’s Destruction So Far</a></h3>
-                    <p>After hitting Florida’s Gulf Coast, Helene tore through the Southeast and ravaged western North
-                        Carolina with floods and mudslides. The death toll has risen to more than 130.</p>
-                    <p><strong>By ADEEL HASSAN and ISABELLE TAFT</strong></p>
+                <div class="article-text article-text-date">
+                    <p class="article-date">Oct. 8, 2024</p>
                 </div>
-                <img src="/images/hurricane-helene.jpg" alt="Hurricane Helene Article">
+                <div class="article-text">
+                    <h3><a href="annotation.html">Annotation of 'Man Smashes Ai Weiwei's Porcelain Sculpture at Italian
+                            Museum' By Derrick
+                            Bryson Taylor</a></h3>
+                    <p>The man behind the episode, at a reception for Mr. Ai's new exhibition in Bologna, has targeted
+                        artists before, a museum spokesman said.
+                    </p>
+                    <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;">By LAYNE HUNT</p>
+                </div>
+                <img src="/images/drop.png" alt="Solar Eclipse Article">
             </div>
         </section>
     </main>
