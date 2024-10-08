@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Chelt-light";
+    src: url('/fonts/CheltenhamStdLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General Styles */
 body {
     font-family: 'Georgia', serif;
@@ -221,6 +228,11 @@ body {
 
 }
 
+.annotation-title {
+    font-family: 'Chelt-light', serif;
+}
+
+
 .article-title-sub {
     font-family: 'Georgia', serif;
     font-size: 21px;
@@ -288,7 +300,15 @@ body {
 
 .article-content p {
     margin-bottom: 20px;
+    line-height: 1.4;
+    max-width: 600px;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.normal-content {
     font-size: 20px;
+    margin-bottom: 20px;
     line-height: 1.4;
     max-width: 600px;
     margin-left: 12%;
@@ -432,11 +452,44 @@ p a:hover {
 
 .annotated-text {
     border-left: 3px solid #ccc; /* Right border for annotation */
-    margin-left: 12%;
-    margin-right: 12%;
-    padding-left: auto; 
-    margin: 15px 0; /* Space above and below the annotated section */
-    color: #7e7e7e; /* Text color */
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #8f8f8f; /* Text color */
     font-style: italic; /* Optional: differentiate it */
-    font-size: 14px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* Ensures content flows vertically */
+    align-items: center;
+}
+
+.annotated-text img {
+    max-width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.description, .question {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.description {
+    background-color: #f2f2f2;
+    margin: 15px;
+}
+.question {
+    background-color: #fff;
+}
+.expert-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
 }

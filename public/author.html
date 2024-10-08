@@ -5,108 +5,298 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NYT Writer's Articles</title>
+    <title>Layne Hunt - The New York Times</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+        @font-face {
+            font-family: 'Chom';
+            src: url('/fonts/Chomsky.woff2') format('woff2');
+            font-weight: lighter;
+            font-style: normal;
         }
 
-        header {
-            padding: 20px;
+        @font-face {
+            font-family: "Chelt";
+            src: url('/fonts/CheltenhamStdBookCondIt.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .title-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-container {
+            text-align: center;
+            padding-top: 5px;
+            background-color: white;
+            position: relative;
+            z-index: 500;
+            transition: all 0.3s ease;
+            /* Smooth transition effect */
+        }
+
+        #center {
+            text-align: center;
+            font-family: 'Chom', 'Times New Roman', serif, serif;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            line-height: 1.2;
+        }
+
+        .profile-header p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 5px 0 0;
+        }
+
+        nav {
+            margin-top: 20px;
             text-align: center;
         }
 
-        header img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
+        nav a {
+            margin: 0 15px;
+            font-size: 1em;
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        header-sub {
-            display: flex;
-        }
-
-        header h1 {
-            margin: 20px 0 10px;
-            font-size: 2.5em;
+        nav a:hover {
+            text-decoration: underline;
         }
 
         main {
             padding: 20px;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        article {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        article h2 {
-            margin-top: 0;
+        h2 {
             font-size: 1.8em;
+            margin-top: 40px;
         }
 
-        article p {
-            font-size: 1em;
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .content-section p {
+            font-size: 1.1em;
             line-height: 1.6;
+            color: #333;
         }
 
-        article a {
+        .content-section a {
             color: #0073e6;
             text-decoration: none;
         }
 
-        article a:hover {
+        .content-section a:hover {
             text-decoration: underline;
+        }
+
+        /* Contact Me Section */
+        .contact-info {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 1em;
+        }
+
+        /* Featured and Latest Sections */
+        .featured,
+        .latest {
+            margin-top: 40px;
+        }
+
+        .featured h2,
+        .latest h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .article-card {
+            display: inline-block;
+            width: 48%;
+            vertical-align: top;
+            margin-bottom: 20px;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .article-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .article-card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .latest-article {
+            margin-bottom: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .latest-article img {
+            width: 150px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .latest-article h3 {
+            font-size: 1.3em;
+            margin: 0 0 10px;
+        }
+
+        .latest-article p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .article-date {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 5px;
         }
     </style>
 </head>
 
 <body>
+    <div class="title-container">
+        <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">The New New York
+                Times</a></h1>
+    </div>
 
-    <header>
-        <div class="header-sub">
-            <img src="/images/author.jpg" alt="Author's Profile Picture">
-            <h1>Name</h1>
-            <p>New York Times Contributor</p>
+    <div class="profile-header">
+        <img src="/images/author.jpg" alt="Derrick Bryson Taylor's Profile Picture">
+        <div>
+            <h1>Layne Hunt</h1>
+            <p>I am a studying various New York Times
+                articles in my class WRTG 3020-020 New York Times Topics. Taught by Anthony Abiragi.</p>
         </div>
-    </header>
+    </div>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Featured</a>
+        <a href="#">Latest</a>
+    </nav>
 
     <main>
-        <!-- First Article -->
-        <article>
-            <h2>TBP</h2>
-            <p>Published on: <strong>Date</strong></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie ex a mi laoreet, sit amet
-                facilisis ex feugiat. Aliquam at accumsan risus...</p>
-            <a href="link-to-article-1.html" target="_blank">Read More</a>
-        </article>
 
-        <!-- Second Article -->
-        <article>
-            <h2>TBP 2</h2>
-            <p>Published on: <strong>Date</strong></p>
-            <p>Sed quis ultricies lorem. Vivamus vehicula sapien ac mauris tincidunt, et fermentum sapien dignissim.
-                Pellentesque facilisis odio eu quam porttitor facilisis...</p>
-            <a href="link-to-article-2.html" target="_blank">Read More</a>
-        </article>
+        <section class="content-section">
+            <h2>My Background</h2>
+            <p>Before joning the New New York times 1 year ago, I was a student at the University of Colorado Boulder,
+                studying Computer Science with a minor in Business. I went on to work as a softawre engineer and
+                freelance writer for this publication.</p>
+        </section>
 
-        <!-- Third Article -->
-        <article>
-            <h2>TBP 3</h2>
-            <p>Published on: <strong>Date</strong></p>
-            <p>Curabitur malesuada purus ac elit egestas auctor. Donec quis pharetra magna. In vehicula purus a metus
-                sollicitudin, vel porttitor enim suscipit...</p>
-            <a href="link-to-article-3.html" target="_blank">Read More</a>
-        </article>
+        <!-- Contact Me Section -->
+        <section class="contact-info">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:huntlayne@icloud.com">huntlayne1@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/layne-hunt-544a7816b/" target="_blank">Layne Hunt
+                </a></p>
+            <p>Anonymous tips: <a href="https://www.nytimes.com/tips" target="_blank">nytimes.com/tips</a></p>
+        </section>
 
-        <!-- Add more articles similarly -->
+        <!-- Featured Section -->
+        <section class="featured">
+            <h2>Featured</h2>
+            <div class="article-card">
+                <img src="/images/candy-corn.jpg" alt="Candy Corn Article">
+                <h3><a href="annotation.html">Annotation of 'Man Smashes Ai Weiwei's Porcelain Sculpture at Italian
+                        Museum' By Derrick
+                        Bryson Taylor</a></h3>
+                <p class="article-date">October 8, 2024</p>
+            </div>
+            <div class="article-card">
+                <img src="/images/spring-cleaning.jpg" alt="Spring Cleaning Article">
+                <h3><a href="index.html">The Death of the Natural Diamond; How This Disappearance is Shaking the
+                        World</a></h3>
+                <p class="article-date">September 15, 2071</p>
+            </div>
+        </section>
 
+        <!-- Latest Section -->
+        <section class="latest">
+            <h2>Latest</h2>
+
+            <!-- First Latest Article -->
+            <div class="latest-article">
+                <div class="article-text">
+                    <p class="article-date">Oct. 2, 2024</p>
+                    <h3><a href="#">‘Ring of Fire’ Solar Eclipse Will Be Visible in Parts of South America</a></h3>
+                    <p>Not everyone will be able to see the phenomenon, known as an annular eclipse, on Wednesday,
+                        though a partial solar eclipse may be visible in parts of Antarctica and Hawaii.</p>
+                    <p><strong>By DERRICK BRYSON TAYLOR</strong></p>
+                </div>
+                <img src="/images/solar-eclipse.jpg" alt="Solar Eclipse Article">
+            </div>
+
+            <!-- Second Latest Article -->
+            <div class="latest-article">
+                <div class="article-text">
+                    <p class="article-date">Sept. 29, 2024</p>
+                    <h3><a href="#">What We Know About Hurricane Helene’s Destruction So Far</a></h3>
+                    <p>After hitting Florida’s Gulf Coast, Helene tore through the Southeast and ravaged western North
+                        Carolina with floods and mudslides. The death toll has risen to more than 130.</p>
+                    <p><strong>By ADEEL HASSAN and ISABELLE TAFT</strong></p>
+                </div>
+                <img src="/images/hurricane-helene.jpg" alt="Hurricane Helene Article">
+            </div>
+        </section>
     </main>
 
 </body>
