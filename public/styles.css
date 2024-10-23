@@ -494,3 +494,131 @@ p a:hover {
         flex-direction: column;
     }
 }
+.podcast-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.podcast-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.podcast-header:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Default overlay */
+    z-index: 1;
+    transition: background-color 0.5s ease; /* Smooth transition for overlay */
+}
+
+.podcast-content {
+    z-index: 2;
+}
+
+.podcast-date {
+    font-size: 16px;
+    margin-bottom: 9px;
+    opacity: 0.8;
+    font-family: "Arial", sans-serif;
+}
+
+.podcast-title {
+    font-family: 'Chelt-light', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.podcast-description {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.podcast-playbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+    width: 0;
+    height: 0;
+    padding-right: 25px;
+    border: none; /* Remove any default borders */
+    background: none; /* Remove any default background */
+    outline: none; /* Remove any default outline */
+    
+    border-left: 40px solid #fff; /* Triangle */
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* When hovered over the background image */
+.podcast-header:hover .play-button {
+    border-left-width: 20px; /* Make triangle smaller */
+    border-top-width: 12.5px;
+    border-bottom-width: 12.5px;
+}
+
+.podcast-header:hover .play-button::before {
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: -39px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff; /* Circle around the triangle */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.timeline-bar {
+    width: 400px;
+    cursor: pointer;
+}
+
+.duration {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .podcast-header {
+        height: 400px;
+    }
+
+    .timeline-bar {
+        width: 250px;
+    }
+
+    .play-button {
+        border-left-width: 30px; /* Adjust button size for smaller screens */
+        border-top-width: 20px;
+        border-bottom-width: 20px;
+    }
+}
