@@ -10,6 +10,7 @@
 
 <body>
 
+
     <!-- Main Container for the Title -->
     <div class="title-container">
         <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">The New New York
@@ -48,43 +49,332 @@
             <div class="overlay"></div>
             <div class="podcast-content">
                 <p class="podcast-date">Oct. 22, 2024</p>
-                <h2 class="podcast-title">As Marijuana’s Popularity Grows, So Do Its Harms</h2>
+                <h2 class="podcast-title">The Digital Monopoly: Google's legal battle with the U.S.</h2>
                 <p class="podcast-description">
-                    More Americans are consuming more potent forms of the drug more often. And some of the heaviest users are experiencing unexpected health effects.
+                    More Americans are consuming more potent forms of the drug more often. And some of the heaviest
+                    users are experiencing unexpected health effects.
                 </p>
-                <div class="podcast-playbar">
-                    <button id="playButton" class="play-button"></button> <!-- Added ID -->
-                    <input type="range" id="timelineBar" class="timeline-bar" value="0" max="100"> <!-- Added ID -->
-                    <span id="duration" class="duration">00:05</span> <!-- Added ID -->
+                <div class="transcript-button-container">
+                    <button id="transcriptButton" class="transcript-button">
+                        <img src="/images/transcript-icon.svg" alt="Transcript Icon" class="transcript-icon">
+                        Transcript
+                    </button>
                 </div>
+
+
+                <div class="podcast-playbar">
+                    <button id="backwardButton" class="skip-button">&lt;</button>
+                    <button id="playButton" class="play-button">Play</button>
+                    <button id="forwardButton" class="skip-button">&gt;</button>
+                    <input type="range" id="timelineBar" class="timeline-bar" value="0" max="100">
+                    <span id="duration" class="duration">14:21</span>
+                </div>
+
             </div>
         </div>
         <!-- Hidden Audio Element -->
         <audio id="podcastAudio" preload="auto">
-            <source src="audio/test.mp3" type="audio/mpeg">
+            <source src="audio/Layne_Hunt_Transcript.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 
+
+
+
+        <div id="transcriptModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="transcript-content">
+                    <h2>The Digital Monopoly: Google's legal battle with the U.S.
+                    </h2>
+                    <p>This is the Daily, I’m your host Lucy Adlen. It’s Tuesday, October 29, and today we’re diving
+                        into what could be one of the most significant antitrust cases in decades. The U.S. government
+                        is taking aim at one of the biggest players in tech—Google. In a filing this week, the Justice
+                        Department laid out potential actions that could reshape the $2 trillion company’s core
+                        business, from breaking off key parts like its Chrome browser and Android operating system to
+                        forcing Google to share the secret sauce behind its search engine with competitors. Here with me
+                        today is Layne Hunt, a journalist with expertise in tech law, here to unpack the case against
+                        Google, what the Justice Department is hoping to achieve, and what this all means for the future
+                        of the internet as we know it.
+                    </p>
+                    <p><strong>Host:</strong> “Could you walk me through how this case against Google first started,
+                        and what triggered the government’s concerns?”</p>
+                    <p><strong>Layne:</strong> “Absolutely. The US Department of Justice and several states first sued
+                        Google in 2020, accusing them of monopolistic practices in the search engine space. The lawsuit
+                        focuses on the claims that Google unfairly maintains dominance by paying companies like Apple to
+                        make its search engine the default on browsers and smartphones. The DOJ argued that this
+                        behavior prevents competitors from gaining traction, leading to reduced competition.</p>
+                    <p><strong>Host:</strong> “I’ve heard of traditional monopolies before, but could you please explain
+                        what the term digital monopoly means?”</p>
+                    <p><strong>Layne:</strong> “Sure, a digital monopoly refers to when a single company dominates a
+                        particular digital market, not necessarily by controlling physical resources but by leveraging
+                        data, user bases, or platform reach. In this case, it’s about Google's dominance in internet
+                        search and digital advertising. This power imbalance stems from the massive amount of data they
+                        collect and their ability to use that data to refine and maintain their dominant position. A
+                        digital monopoly can limit competition by making it difficult for smaller players to offer
+                        comparable services or gain market share"</p>
+                    <p><strong>Host:</strong> “So what specific behaviors are of concern to the Government?”</p>
+                    <p><strong>Layne:</strong> “Well, the initial concern was that Google maintained an unfair advantage
+                        over other search engines due to deals with other companies, but over time, this case has
+                        expanded to include other parts of Google’s business, specifically their control over digital
+                        advertising. This behavior by Google could limit the overall user experience, decrease the flow
+                        of innovation, and stifle competition by creating an environment where smaller players can’t
+                        effectively enter or compete in the market.”
+                    </p>
+                    <p><strong>Host:</strong> “Right, so we’re not just talking about search anymore. What other parts
+                        of Google’s business are under scrutiny?”</p>
+                    <p><strong>Layne:</strong> “Exactly. A big part of this case now is Google’s digital advertising
+                        technologies, known as the ad tech stack. The DOJ claims that Google monopolizes this space
+                        through acquisitions, like DoubleClick, and manipulation of advertising auctions. The company
+                        owns tools that both publishers and advertisers rely on to sell and buy ads online, giving them
+                        a significant advantage. This includes their control over ad exchanges, which makes it hard for
+                        competitors to get a foothold in the market.”</p>
+                    <p><strong>Host:</strong> “You mentioned DoubleClick—can you explain what that acquisition is and
+                        why it’s significant in this case?”</p>
+                    <p><strong>Layne:</strong> “Sure. DoubleClick was one of Google’s most important acquisitions back
+                        in 2008. It provides the company impressive digital advertising infrastructure that allows
+                        Google to leverage and profit off of other companies advertisements. With this acquisition,
+                        Google gained control over the ad server market, which is the technology used by websites to
+                        manage and sell ad space. This gave Google an enormous amount of power in the digital ad space,
+                        allowing them to act as both a buyer and seller in ad transactions, which the DOJ argues stifles
+                        competition.”
+                    </p>
+                    <p><strong>Host:</strong> “What concrete actions or regulations is the Justice Department pushing
+                        for in their case?”</p>
+                    <p><strong>Layne:</strong> “The Justice Department is suggesting a few possible restrictions. These
+                        include banning exclusive contracts that make Google the default search engine on major
+                        platforms like Apple’s iPhone, which would give other search engines a fair shot at being used.
+                        They also want the company to open up access to data that other companies could use to improve
+                        their own search algorithms.The most extreme proposal is breaking up Google’s various business
+                        units, which could mean splitting up their search engine from other key assets like their
+                        advertising network, Chrome browser, and Android operating system”
+                    </p>
+                    <p><strong>Host:</strong> “That’s huge. How likely is it that the court will go for such a radical
+                        solution, like breaking up Google?”</p>
+                    <p><strong>Layne:</strong> ““It’s hard to say at this point. Historically, the U.S. government has
+                        only broken up a few major companies, like AT&T and Standard Oil. Breaking up a company the size
+                        of Google would be rare, but it’s not entirely off the table. The court would have to decide if
+                        Google’s dominance is harmful enough to warrant such a drastic move.”
+
+                        “What’s interesting is that Google isn’t the only tech giant under scrutiny. The FTC has also
+                        filed suits against Facebook (Meta) and Apple. In Facebook’s case, the FTC is seeking to break
+                        up its control over platforms like Instagram and WhatsApp, claiming that these acquisitions gave
+                        Meta a stranglehold on social media. Meanwhile, Apple is being accused of monopolistic practices
+                        in the smartphone market, particularly for limiting how rival software can work on iPhones.
+                        These lawsuits indicate a broader trend of antitrust action against big tech, and the outcome of
+                        these cases could influence how the court approaches Google.”
+                    </p>
+                    <p><strong>Host:</strong> “So, how is Google responding to this, and what are their main points of
+                        defense?”</p>
+                    <p><strong>Layne:</strong> “Google maintains that it faces plenty of competition in the market, such
+                        as social media platforms, ecommerce applications, and new AI-powered tools. They have also
+                        publicly defended their business model, stating that consumers use their product because it
+                        provides better results, not because of any anti-competitive agreements. They’ve also pushed
+                        back against the DOJ’s claims about digital advertising, saying that advertisers and publishers
+                        have multiple alternatives outside of Google’s ecosystem.” </p>
+                    <p><strong>Host:</strong> “But is there any truth to Google’s claim that they face significant
+                        competition?”</p>
+                    <p><strong>Layne:</strong> “That’s where the DOJ disagrees. According to the DOJ’s data, Google
+                        controls over 90% of the publisher ad server market and 80% of the advertiser ad network market.
+                        This means that even though alternatives exist, Google’s dominance makes it difficult for
+                        competitors to gain traction. For instance, the DOJ argues that Google’s acquisitions, like
+                        DoubleClick, and its auction manipulation practices have essentially locked publishers and
+                        advertisers into using Google’s tools, preventing the rise of real competition.”</p>
+                    <p><strong>Host:</strong> “Why is Google so persistent in their defense? How could these
+                        propositions impact their business?”</p>
+                    <p><strong>Layne:</strong> “They are persistent in this defense because the propositions could
+                        fundamentally change their business along with their earnings. If forced to share data or limit
+                        their deals with companies like Apple, they risk losing their competitive advantage. Their
+                        success heavily relies on being the default search engine and their control over an extensive
+                        web of user data. If the government’s proposals are implemented, it could reduce their market
+                        share, impact their ad revenue, and even break up their ecosystem of products, which is designed
+                        to work together. For a company like Google, that kind of restructuring could mean a significant
+                        loss in power and influence across the tech landscape”
+                    </p>
+                    <p><strong>Host:</strong> “So what was the result of these trials?”</p>
+                    <p><strong>Layne:</strong> “So, after weeks of intense debate, the Google antitrust trial primarily
+                        concluded that Google holds substantial power over the search and search advertising markets.
+                        Judge Mehta found that Google’s market dominance—estimated at around 90% of general search
+                        services—was due to its agreements with device manufacturers, carriers, and major browsers like
+                        Apple’s Safari. These deals essentially made Google the default search engine on billions of
+                        devices, squeezing out competition.""
+
+                        "Now, the court has determined these arrangements likely limit user choice and stifle
+                        competition. The trial is set to move to a remedies phase, where the Department of Justice (DOJ)
+                        may propose solutions like prohibiting Google from paying for default status or even separating
+                        parts of its business, although breaking up the company is considered less likely. The case is
+                        already being seen as a landmark in tech regulation, potentially influencing future actions
+                        against other major companies in the industry.”
+                    </p>
+                    <p><strong>Host:</strong> “Looking at the result of these lawsuits, it seems that the government is
+                        trying to crack down on monopolies in the tech space. Considering the rapid rate of
+                        technological development in recent years with tools like AI, how do you expect the digital law
+                        landscape to change? Do you think our government can keep up with this innovation and
+                        effectively protect the digital assets our society relies on?”
+                    </p>
+                    <p><strong>Layne:</strong> “That’s one of the toughest challenges policymakers face right now.
+                        Technology is evolving faster than current laws can keep up with. As of now, the framework for
+                        digital monopolies is based on laws created before the creation of the internet. Adapting these
+                        laws to introduce digital-specific antitrust guidelines that take into consideration the damage
+                        digital monopolies pose on technological innovation is critical to ensuring fair competition
+                        within the space.”</p>
+                    <p><strong>Host:</strong> “You mentioned digital-specific guidelines—could you explain what those
+                        might look like?”</p>
+                    <p><strong>Layne:</strong> “Absolutely. Digital-specific guidelines would likely focus on several
+                        different areas. First, it would be beneficial to solidify rules related to data portability and
+                        interoperability in order to give consumers more maneuverability between services and companies.
+                        Additionally, regulators could implement stricter controls around data collection and usage. In
+                        recent years, we have seen a big push towards greater transparency within the data collection
+                        space, but modifying policy to specify this expectation of transparency could greatly improve
+                        the user experience and privacy, while also making sure companies don’t misuse their positions.”
+                    </p>
+                    <p><strong>Host:</strong> "Balancing competition with innovation sounds like a delicate process.
+                        What
+                        are some approaches the government could take to regulate big tech without compromising the
+                        industry’s economic impact?”</p>
+                    <p><strong>Layne:</strong> “One possible solution rather than try to break these large companies
+                        down, we could start heavily supporting smaller companies. Encouraging smaller competitors
+                        through market incentives and offering more support for startups creates a more competitive
+                        environment without disrupting the big tech architecture.”</p>
+                    <p><strong>Host:</strong> “So, instead of directly limiting big tech, you’re suggesting that we
+                        promote smaller competitors. Do you think that could be more effective than, say, breaking up
+                        companies like Google?”
+                    </p>
+                    <p><strong>Layne:</strong> “In some ways, yes. Breaking up a company like Google could have
+                        unforeseen consequences for innovation and even global competition, especially if other
+                        countries aren’t following the same approach. Encouraging competition through market incentives
+                        and support for startups allows the government to foster a more competitive environment without
+                        disrupting the successful products and services these companies have created. By giving smaller
+                        companies the tools and resources to compete, we could achieve the benefits of increased
+                        competition without the downsides of dismantling established companies that are already
+                        essential to our digital infrastructure.”
+                    </p>
+                    <p><strong>Host:</strong> “Interesting. Now, with the rise of AI, digital advertising, and
+                        data-driven tools, could we also see new types of public-private partnerships to manage these
+                        monopolistic issues?”</p>
+                    <p><strong>Layne:</strong> ““Definitely. Public-private partnerships could be incredibly beneficial
+                        here. For example, the government could partner with big tech companies to establish
+                        data-sharing standards that enable smaller competitors to access valuable data without
+                        infringing on user privacy. This could include anonymized data that would help startups build
+                        effective products without directly competing with big players."
+
+                        "Additionally, public-private partnerships could help develop ethical guidelines for AI,
+                        ensuring
+                        that companies follow responsible AI practices that avoid discrimination and protect user
+                        rights. Instead of enforcing strict limitations, this approach could create an ecosystem where
+                        companies are accountable to agreed-upon standards and contribute to a fairer, safer digital
+                        landscape.” </p>
+                    <p><strong>Host:</strong> “It sounds like there are lots of options for regulation, from digital
+                        guidelines to public-private partnerships. But what’s the government’s priority here? Are they
+                        more focused on consumer protection or on fostering competition?”
+                    </p>
+                    <p><strong>Layne:</strong> ““I think it’s a combination of both, but consumer protection is
+                        definitely a key driver. As we’ve seen with data privacy scandals and algorithmic biases,
+                        there’s a growing need to ensure that users are protected in this digital age. However,
+                        fostering competition is also crucial, as monopolies can lead to higher prices and less choice
+                        for consumers. The government’s ideal outcome would be a market where consumers have access to
+                        safe, diverse, and competitive services. So, while consumer protection might be the primary
+                        concern, fostering competition is viewed as a way to keep tech companies accountable and ensure
+                        long-term consumer benefits.”</p>
+                    <p><strong>Host:</strong> So, if these regulatory changes and partnership strategies work out, what
+                        does the future look like for companies like Google? Could they still thrive?”</p>
+                    <p><strong>Layne:</strong> “There’s no reason why Google or any other major tech company couldn’t
+                        continue to thrive under a reimagined regulatory environment. They might need to adapt—perhaps
+                        by focusing more on user-centered design and ethical data usage. But if they commit to operating
+                        fairly within a competitive market, they can continue to innovate and remain profitable.
+                        Regulation doesn’t have to mean limiting a company’s success; it simply provides guardrails to
+                        make sure their growth aligns with public interest. Ultimately, a well-regulated tech
+                        environment could be a win-win, fostering a dynamic and competitive digital economy that still
+                        rewards innovation.”
+                    </p>
+                    <p><strong>Host:</strong> “As we’ve explored today, the rapid growth of tech giants like Google has
+                        brought both incredible advancements and unique challenges. The question of how to balance
+                        innovation with fair competition, consumer protection, and ethical data practices isn’t one with
+                        a simple answer. Yet, it’s clear that our digital world is at a turning point—one where
+                        collaboration between government and industry could reshape the future of technology. As new
+                        regulations and partnerships emerge, we’ll be watching closely to see how these shifts impact
+                        not only the tech landscape but also the lives of everyday users. Thanks for joining us today,
+                        and thank you, Layne, for sharing your insights on where we might be headed.”
+                    </p>
+                    <p><strong>Layne:</strong> “Thank you for having me.”</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </section>
 
-    <script src="js/podcast.js"></script>
 
     <!-- Main Article Section (Transcript) -->
     <main class="article-container">
-        <article class="main-article">
-            <h2 class="article-title" style="font-family: 'Chelt', serif;">Podcast Transcript</h2>
-            
-            <hr style="width: 80%; opacity: 40%;">
-
-            <div class="article-content" style="font-family: Georgia;">
-                <p>Michael Barbaro: Today on the Daily, the world has mined its last natural diamond. How did we get here, and what comes next?</p>
-                <p>Guest Expert: We’ve seen this coming for decades. Natural diamonds have been on the decline due to excessive mining and environmental damage...</p>
-                <!-- More Transcript Content -->
+        <article class="article-content">
+            <div>
+                <div class="author-profile">
+                    <div class="author-profile-sub">
+                        <img class="profile-photo" src="images/author.jpg" alt="Author photo">
+                        <p>
+                            <b><a href="author.html" style="text-decoration: none; color: black;">Guest Speaker: <u>Layne
+                                        Hunt</u></a></b>
+                        </p>
+                    </div>
+                </div>
             </div>
+
+
+            <h2 style="font-family: 'Chelt', serif; font-size: 40px; margin: 0; padding-top: 20px; padding-left: 20px;">Background Reading</h2>
+
+            <hr>
+
+
+            <p><strong>Author:</strong> <a href="https://www.nytimes.com/by/david-mccabe">David McCabe</a> -
+                <a href="https://www.nytimes.com/2024/10/08/technology/google-search-antitrust.html">
+                    U.S. Weighs Forcing Google to Break Off Parts of the Company</a>
+            </p>
+            <hr>
+            <section>
+                <h2>Motivating Event</h2>
+                <p style="font: Georgia; font-size: 20px;">
+                    The Justice Department is moving forward with extreme action against Google, aiming to curb its
+                    monopoly in the search engine market. The government is contemplating a restructuring that could
+                    redefine the $2 trillion tech company. This move marks a significant moment in antitrust history,
+                    similar to the breakups of companies like AT&T and Standard Oil. With a potential court ruling in
+                    the coming months, the outcome could dramatically reshape not only Google’s core business but also
+                    the competitive landscape of the digital world and transform the public space.
+                </p>
+            </section>
+            <section>
+                <h2>Reflection on the Genre of Dialogue</h2>
+                <p style="font: Georgia; font-size: 20px;">
+                    When comparing the two genres of dialogue and annotation, it reveals how both are tied to the idea
+                    of active engagement with not only the media being explored, but with the person creating that
+                    media. Dialogue explores ideas through voices, each contributing unique insights that can shape and
+                    change the direction of the conversation. This format works towards creating nuanced understanding
+                    by allowing the different perspectives to interact, negotiate, and clarify each other in real-time.
+                    Annotation involves more reflective engagement, where one perspective interacts with the text by
+                    posing questions, critiquing, or highlighting key information left out of the original piece. Both
+                    approaches highlight the importance of doubt and curiosity when exploring a piece. Ultimately, both
+                    genres strive to provide viewers with a deeper understanding through curiosity and skepticism.
+                </p>
+            </section>
         </article>
     </main>
 
-    <script src="script.js"></script>
+    <aside class="related-articles">
+        <h3>Related Articles</h3>
+        <ul>
+            <li><a href="annotation.html">Annotation of 'Man Smashes Ai Weiwei's Porcelain Sculpture at Italian Museum'
+                    By
+                    Derrick Bryson Taylor</a></li>
+            <li><a href="theDaily_Google.html">The Digital Monopoly: How Google is shaping the legal battelground
+                    going</a></li>
+            <li><a href="#">Hurricane Conspiracies and growing unrest in Meteorology</a></li>
+            <li><a href="https://www.nytimes.com/2024/09/12/world/americas/mexico-judicial-overhaul-controversy.html">Reform
+                    or the End of Justice? Mexico Is Split on Plan to Elect Judges</a></li>
+        </ul>
+    </aside>
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -97,6 +387,9 @@
             </nav>
         </div>
     </footer>
+
+    <script src="js/podcast.js"></script>
+</body>
 
 </body>
 

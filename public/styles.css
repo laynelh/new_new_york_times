@@ -76,46 +76,31 @@ body {
 .header {
     padding: 10px;
     padding-top: 10px;
-    /* Adjust based on your needs */
     margin-left: 0;
-    /* Set to 0 for better centering */
     margin-right: 0;
-    /* Set to 0 for better centering */
     border-bottom: 4px double #ababab;
     background-color: white;
     position: relative;
-    /* Header is initially not fixed */
     z-index: 1000;
-    /* Ensure it stays on top */
     transition: all 0.3s ease;
-    /* Smooth transition for when it becomes fixed */
     display: flex;
-    /* Flexbox to center contents */
     justify-content: center;
-    /* Center items horizontally */
     align-items: center;
-    /* Vertically center items in the header */
     width: 100%;
-    /* Ensure header takes the full width of the page */
 }
 
 /* Centering and spacing for the nav bar */
 .nav {
     display: flex;
     justify-content: center;
-    /* Center all nav links */
     align-items: center;
     gap: 20px;
-    /* Add space between the links */
     font-family: 'Arial', sans-serif;
     font-size: 14px;
     flex-wrap: wrap;
-    /* Allow wrapping of links on smaller screens */
     width: auto;
-    /* Adjust width dynamically based on the content */
 }
 
-/* Adjusting the nav links */
 .nav a {
     text-decoration: none;
     color: black;
@@ -123,12 +108,10 @@ body {
     position: relative;
 }
 
-/* Hover effect with underline */
 .nav a:hover {
     text-decoration: underline;
 }
 
-/* Separator between sections */
 .separator {
     margin: 0 15px;
     color: #ccc;
@@ -251,21 +234,19 @@ body {
 }
 
 .author-profile {
-    margin-bottom: 0px;
-    margin-left: 12%;
+    margin: 0%;
 }
 
 .author-profile-sub {
     display: flex;
     padding: 0;
-    margin-right: 71%;
-    /* width: 100vw; */
+    margin-right: 70%;
+    width: 300px;
+
 
 }
 
 .author-profile-sub p {
-    margin-top: 10%;
-    /* margin-right: 50%; */
     font-size: 15px;
 }
 
@@ -275,7 +256,7 @@ body {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 12%;
+    margin-right: 8%;
 }
 
 .article-image {
@@ -298,35 +279,31 @@ body {
 
 }
 
-.article-content p {
-    margin-bottom: 20px;
-    line-height: 1.4;
+.article-content {
     max-width: 600px;
-    margin-left: 12%;
-    margin-right: 12%;
-    font-size: 20px;
+    padding: 20px 0;
+    text-align: left;
 }
 
 .normal-content {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 25px;
     line-height: 1.4;
-    max-width: 600px;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Georgia', serif;
 }
 
 p a {
-    color: #4682B4;
+    color: #3d3d3d;
     text-decoration: underline;
 }
 
 p a:visited {
-    color: #4682B4;
+    color: #5d4967;
 }
 
 p a:hover {
-    color: #2f4c69;
+    color: #0d0d0d;
     text-decoration: none;
 }
 
@@ -509,6 +486,7 @@ p a:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
+    min-height: 90%;
     color: white;
     position: relative;
     text-align: center;
@@ -516,7 +494,7 @@ p a:hover {
 }
 
 .podcast-header:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay on hover */
+    background-color: rgba(0, 0, 0, 0.121); /* Darker overlay on hover */
 }
 
 .overlay {
@@ -525,7 +503,7 @@ p a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Default overlay */
+    background-color: rgba(0, 0, 0, 0.011); /* Default overlay */
     z-index: 1;
     transition: background-color 0.5s ease; /* Smooth transition for overlay */
 }
@@ -565,42 +543,82 @@ p a:hover {
 .play-button {
     width: 0;
     height: 0;
-    padding-right: 25px;
     border: none; /* Remove any default borders */
     background: none; /* Remove any default background */
     outline: none; /* Remove any default outline */
     
-    border-left: 40px solid #fff; /* Triangle */
+    border-left: 40px solid #fff; /* Triangle shape */
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+/* Hide any direct text content */
+#playButton {
+    text-indent: -9999px; 
+    overflow: hidden;
+    white-space: nowrap; 
 }
 
 /* When hovered over the background image */
 .podcast-header:hover .play-button {
-    border-left-width: 20px; /* Make triangle smaller */
-    border-top-width: 12.5px;
-    border-bottom-width: 12.5px;
+    transform: scale(0.8); /* Slightly reduce size of the triangle */
 }
 
 .podcast-header:hover .play-button::before {
     content: '';
     position: absolute;
-    top: -26px;
-    left: -39px;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff; /* Circle around the triangle */
-    border-radius: 50%;
+    top: -12px; /* Adjust position to center around triangle */
+    left: -12px;
+    width: 64px; /* Circle size around the play button */
+    height: 64px;
+    border: 2px solid #fff; /* Circle border */
+    border-radius: 50%; /* Make it a circle */
     transition: all 0.3s ease;
 }
 
 .timeline-bar {
-    width: 400px;
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 80%; /* Adjust based on your design */
+    height: 8px; /* Thickness of the track */
+    background: #E1E7EA; /* Lighter color for the track */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styling for the slider thumb/knob */
+.timeline-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Size of the knob */
+    height: 15px;
+    background: #fff; /* White color for the knob */
+    border-radius: 50%; /* Circular knob */
+    border: 2px solid #fff; /* White border for the knob */
     cursor: pointer;
 }
+
+.timeline-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+/* Remove focus outline */
+.timeline-bar:focus {
+    outline: none;
+}
+
 
 .duration {
     margin-left: 20px;
@@ -621,4 +639,109 @@ p a:hover {
         border-top-width: 20px;
         border-bottom-width: 20px;
     }
+}
+
+.skip-button {
+    background: none;          /* No background */
+    border: none;              /* No border */
+    color: white;              /* White color for the icon */
+    font-size: 24px;           /* Adjust size as needed */
+    cursor: pointer;
+    padding: 0 10px;           /* Minimal padding for alignment */
+    outline: none;             /* Remove outline */
+    transition: transform 0.2s ease; /* Add a subtle effect on hover */
+}
+
+.skip-button:hover {
+    transform: scale(1.2);     /* Slightly enlarge icon on hover */
+}
+
+.podcast-header:hover .skip-button {
+    transform: scale(0.8);  
+}
+
+.transcript-button-container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.transcript-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #E1E7EA;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.transcript-button:hover {
+    background-color: #CBD2D6;
+}
+
+.transcript-icon {
+    width: 30px;
+    height: 35px;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: hidden; /* Prevents scrolling of the entire page when modal is open */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%; /* Adjust as needed for responsive design */
+    max-width: 700px; /* Prevents modal from becoming too wide */
+    max-height: 80%; /* Ensures the modal doesn't exceed viewport height */
+    overflow-y: scroll; /* Enables scrolling within the modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.close-button {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Styling for Speaker Name */
+.speaker-name {
+    font-size: 16px;
+    color: #777; /* Slightly gray text */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Typography for Paragraphs */
+.transcript-paragraph p {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    margin-top: 0;
 }

@@ -3,55 +3,107 @@ const playButton = document.getElementById('playButton');
 const audio = document.getElementById('podcastAudio');
 const timelineBar = document.getElementById('timelineBar');
 const durationDisplay = document.getElementById('duration');
+const forwardButton = document.getElementById('forwardButton');
+const backwardButton = document.getElementById('backwardButton');
 
-// Ensure the audio is ready to play
-audio.addEventListener('canplay', () => {
-    console.log('Audio file loaded successfully.');
+// Function to update the displayed time and progress bar
+function updateTimeline() {
+    if (!isNaN(audio.duration)) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        timelineBar.value = progress;
+        
+        const minutes = Math.floor(audio.currentTime / 60);
+        const seconds = Math.floor(audio.currentTime % 60);
+        durationDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+}
+
+// Ensure the audio is loaded before allowing controls to work
+audio.addEventListener('loadedmetadata', () => {
+    console.log('Audio metadata loaded. Duration:', audio.duration);
+    updateTimeline(); // Initial update of the timeline
 });
 
-// Toggle Play/Pause functionality
+// Play/Pause button functionality
 playButton.addEventListener('click', () => {
     if (audio.paused) {
         audio.play().then(() => {
-            playButton.textContent = 'Pause'; // Change button text to "Pause"
+            playButton.textContent = 'Pause';
         }).catch(error => {
             console.log('Audio playback error:', error);
         });
     } else {
         audio.pause();
-        playButton.textContent = 'Play';  // Change button text back to "Play"
+        playButton.textContent = 'Play';
     }
 });
 
-// Update the timeline and display the current time
+// Forward 10 seconds
+forwardButton.addEventListener('click', () => {
+    if (!isNaN(audio.duration)) {
+        audio.currentTime = Math.min(audio.currentTime + 10, audio.duration);
+        console.log("Skipped forward to:", audio.currentTime);
+        updateTimeline();
+    } else {
+        console.log("Audio duration not loaded yet.");
+    }
+});
+
+// Backward 10 seconds
+backwardButton.addEventListener('click', () => {
+    if (!isNaN(audio.duration)) {
+        audio.currentTime = Math.max(audio.currentTime - 10, 0);
+        console.log("Skipped backward to:", audio.currentTime);
+        updateTimeline();
+    } else {
+        console.log("Audio duration not loaded yet.");
+    }
+});
+
+// Sync the timeline bar with the current audio position
 audio.addEventListener('timeupdate', () => {
-    const currentTime = audio.currentTime;
-    const duration = audio.duration;
-
-    // Update the timeline bar value
-    if (!isNaN(duration)) {
-        timelineBar.value = (currentTime / duration) * 100;
-    }
-
-    // Update the time display
-    const minutes = Math.floor(currentTime / 60);
-    const seconds = Math.floor(currentTime % 60);
-    durationDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    updateTimeline();
 });
 
-// Allow user to change the position of the audio by moving the timeline bar
+// Allow user to seek to a different time by moving the timeline bar
 timelineBar.addEventListener('input', () => {
-    const duration = audio.duration;
-    if (!isNaN(duration)) {
-        const value = timelineBar.value;
-
-        // Update the current time of the audio
-        audio.currentTime = (value / 100) * duration;
+    if (!isNaN(audio.duration)) {
+        const seekTime = (timelineBar.value / 100) * audio.duration;
+        audio.currentTime = seekTime;
+        console.log("Timeline bar set current time to:", seekTime);
+        updateTimeline();
     }
 });
 
-// Error handling for the audio element
+// Error handling for audio element
 audio.addEventListener('error', (e) => {
     console.error('Error loading audio file:', e);
     alert('Error loading the podcast file. Please try again later.');
 });
+
+
+// Get elements for the modal
+const modal = document.getElementById("transcriptModal");
+const btn = document.getElementById("transcriptButton");
+const closeBtn = document.querySelector(".close-button");
+
+if (modal && btn && closeBtn) {
+    // Open modal
+    btn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+
+    // Close modal when 'x' is clicked
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+} else {
+    console.error("Modal elements were not found in the DOM.");
+}
