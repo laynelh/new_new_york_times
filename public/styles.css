@@ -291,7 +291,7 @@ body {
 }
 
 .normal-content {
-    font-size: 25px;
+    /* font-size: 25px; */
     line-height: 1.4;
     margin-bottom: 20px;
     color: #333;
@@ -299,7 +299,7 @@ body {
 }
 
 p a {
-    color: #3d3d3d;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -308,7 +308,7 @@ p a:visited {
 }
 
 p a:hover {
-    color: #0d0d0d;
+    color: #424242;
     text-decoration: none;
 }
 
@@ -436,18 +436,18 @@ p a:hover {
 
 .annotated-text {
     border-left: 3px solid #ccc;
-    /* Right border for annotation */
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     color: #8f8f8f;
-    /* Text color */
     font-style: italic;
-    /* Optional: differentiate it */
     font-size: 18px;
-    display: flex;
+    display: block;
     flex-direction: column;
-    /* Ensures content flows vertically */
     align-items: center;
+}
+
+.annotated-text p, img, h2, h1, h3, h4 {
+    padding-left: 10px;
 }
 
 .annotated-text img {
