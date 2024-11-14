@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    
+
 }
 
 /* Title Section: Fully Centered */
@@ -66,7 +66,7 @@ body {
 .related-articles {
     padding-top: 20px;
     text-align: center;
-    width:90%;
+    width: 90%;
     margin: 0;
     padding: 0;
 }
@@ -283,6 +283,11 @@ body {
     max-width: 600px;
     padding: 20px 0;
     text-align: left;
+    margin-left: 12%;
+    margin-right: 12%;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .normal-content {
@@ -338,11 +343,12 @@ p a:hover {
     }
 
     .author-profile {
-        margin-left: 10px;
+        margin-left: 32%;
     }
 
     .author-profile-sub p {
-        margin-right: 50%;
+        margin-right: 71%;
+        font-size: 15px;
     }
 
 
@@ -429,14 +435,18 @@ p a:hover {
 }
 
 .annotated-text {
-    border-left: 3px solid #ccc; /* Right border for annotation */
+    border-left: 3px solid #ccc;
+    /* Right border for annotation */
     margin-left: 10%;
     margin-right: 10%;
-    color: #8f8f8f; /* Text color */
-    font-style: italic; /* Optional: differentiate it */
+    color: #8f8f8f;
+    /* Text color */
+    font-style: italic;
+    /* Optional: differentiate it */
     font-size: 18px;
     display: flex;
-    flex-direction: column; /* Ensures content flows vertically */
+    flex-direction: column;
+    /* Ensures content flows vertically */
     align-items: center;
 }
 
@@ -450,27 +460,34 @@ p a:hover {
     flex-wrap: wrap;
     gap: 20px;
 }
-.description, .question {
+
+.description,
+.question {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
 }
+
 .description {
     background-color: #f2f2f2;
     margin: 15px;
 }
+
 .question {
     background-color: #fff;
 }
+
 .expert-title {
     font-weight: bold;
     text-decoration: underline;
 }
+
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
     }
 }
+
 .podcast-container {
     width: 100%;
     height: 600px;
@@ -494,7 +511,8 @@ p a:hover {
 }
 
 .podcast-header:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.121); /* Darker overlay on hover */
+    background-color: rgba(0, 0, 0, 0.121);
+    /* Darker overlay on hover */
 }
 
 .overlay {
@@ -503,9 +521,11 @@ p a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.011); /* Default overlay */
+    background-color: rgba(0, 0, 0, 0.011);
+    /* Default overlay */
     z-index: 1;
-    transition: background-color 0.5s ease; /* Smooth transition for overlay */
+    transition: background-color 0.5s ease;
+    /* Smooth transition for overlay */
 }
 
 .podcast-content {
@@ -543,11 +563,15 @@ p a:hover {
 .play-button {
     width: 0;
     height: 0;
-    border: none; /* Remove any default borders */
-    background: none; /* Remove any default background */
-    outline: none; /* Remove any default outline */
-    
-    border-left: 40px solid #fff; /* Triangle shape */
+    border: none;
+    /* Remove any default borders */
+    background: none;
+    /* Remove any default background */
+    outline: none;
+    /* Remove any default outline */
+
+    border-left: 40px solid #fff;
+    /* Triangle shape */
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     cursor: pointer;
@@ -560,35 +584,45 @@ p a:hover {
 
 /* Hide any direct text content */
 #playButton {
-    text-indent: -9999px; 
+    text-indent: -9999px;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 /* When hovered over the background image */
 .podcast-header:hover .play-button {
-    transform: scale(0.8); /* Slightly reduce size of the triangle */
+    transform: scale(0.8);
+    /* Slightly reduce size of the triangle */
 }
 
 .podcast-header:hover .play-button::before {
     content: '';
     position: absolute;
-    top: -12px; /* Adjust position to center around triangle */
+    top: -12px;
+    /* Adjust position to center around triangle */
     left: -12px;
-    width: 64px; /* Circle size around the play button */
+    width: 64px;
+    /* Circle size around the play button */
     height: 64px;
-    border: 2px solid #fff; /* Circle border */
-    border-radius: 50%; /* Make it a circle */
+    border: 2px solid #fff;
+    /* Circle border */
+    border-radius: 50%;
+    /* Make it a circle */
     transition: all 0.3s ease;
 }
 
 .timeline-bar {
-    -webkit-appearance: none; /* Remove default styling */
+    -webkit-appearance: none;
+    /* Remove default styling */
     appearance: none;
-    width: 80%; /* Adjust based on your design */
-    height: 8px; /* Thickness of the track */
-    background: #E1E7EA; /* Lighter color for the track */
-    border-radius: 5px; /* Rounded edges */
+    width: 80%;
+    /* Adjust based on your design */
+    height: 8px;
+    /* Thickness of the track */
+    background: #E1E7EA;
+    /* Lighter color for the track */
+    border-radius: 5px;
+    /* Rounded edges */
     cursor: pointer;
     outline: none;
 }
@@ -597,11 +631,15 @@ p a:hover {
 .timeline-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px; /* Size of the knob */
+    width: 15px;
+    /* Size of the knob */
     height: 15px;
-    background: #fff; /* White color for the knob */
-    border-radius: 50%; /* Circular knob */
-    border: 2px solid #fff; /* White border for the knob */
+    background: #fff;
+    /* White color for the knob */
+    border-radius: 50%;
+    /* Circular knob */
+    border: 2px solid #fff;
+    /* White border for the knob */
     cursor: pointer;
 }
 
@@ -635,29 +673,38 @@ p a:hover {
     }
 
     .play-button {
-        border-left-width: 30px; /* Adjust button size for smaller screens */
+        border-left-width: 30px;
+        /* Adjust button size for smaller screens */
         border-top-width: 20px;
         border-bottom-width: 20px;
     }
 }
 
 .skip-button {
-    background: none;          /* No background */
-    border: none;              /* No border */
-    color: white;              /* White color for the icon */
-    font-size: 24px;           /* Adjust size as needed */
+    background: none;
+    /* No background */
+    border: none;
+    /* No border */
+    color: white;
+    /* White color for the icon */
+    font-size: 24px;
+    /* Adjust size as needed */
     cursor: pointer;
-    padding: 0 10px;           /* Minimal padding for alignment */
-    outline: none;             /* Remove outline */
-    transition: transform 0.2s ease; /* Add a subtle effect on hover */
+    padding: 0 10px;
+    /* Minimal padding for alignment */
+    outline: none;
+    /* Remove outline */
+    transition: transform 0.2s ease;
+    /* Add a subtle effect on hover */
 }
 
 .skip-button:hover {
-    transform: scale(1.2);     /* Slightly enlarge icon on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge icon on hover */
 }
 
 .podcast-header:hover .skip-button {
-    transform: scale(0.8);  
+    transform: scale(0.8);
 }
 
 .transcript-button-container {
@@ -699,8 +746,10 @@ p a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    overflow: hidden; /* Prevents scrolling of the entire page when modal is open */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    overflow: hidden;
+    /* Prevents scrolling of the entire page when modal is open */
 }
 
 .modal-content {
@@ -709,10 +758,14 @@ p a:hover {
     margin-top: 5vh;
     padding: 30px;
     border-radius: 10px;
-    width: 90%; /* Adjust as needed for responsive design */
-    max-width: 700px; /* Prevents modal from becoming too wide */
-    max-height: 80%; /* Ensures the modal doesn't exceed viewport height */
-    overflow-y: scroll; /* Enables scrolling within the modal */
+    width: 90%;
+    /* Adjust as needed for responsive design */
+    max-width: 700px;
+    /* Prevents modal from becoming too wide */
+    max-height: 80%;
+    /* Ensures the modal doesn't exceed viewport height */
+    overflow-y: scroll;
+    /* Enables scrolling within the modal */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -732,7 +785,8 @@ p a:hover {
 /* Styling for Speaker Name */
 .speaker-name {
     font-size: 16px;
-    color: #777; /* Slightly gray text */
+    color: #777;
+    /* Slightly gray text */
     margin-bottom: 5px;
     font-weight: bold;
 }
