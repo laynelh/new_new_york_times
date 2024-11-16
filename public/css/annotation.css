@@ -313,46 +313,45 @@ p a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .article-title {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .article-title-sub {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .article-author {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .article-content p {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .article-image {
+    .main-article {
         margin: 0;
-        /* padding: 0; */
     }
 
-    .article-image img {
-        width: 100%;
+    .article-title,
+    .article-title-sub,
+    .article-author,
+    .article-content {
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
     .author-profile {
-        margin-left: 32%;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .author-profile-sub {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        width: auto;
     }
 
     .author-profile-sub p {
-        margin-right: 71%;
-        font-size: 15px;
+        font-size: 14px;
+        margin: 0;
     }
 
-
+    .profile-photo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
 }
+
 
 /* Related Articles Styles */
 .related-articles {
