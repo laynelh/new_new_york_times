@@ -1,4 +1,4 @@
-# New New York Times
+#The New New York Times
 
 Welcome to **New New York Times**—a creative project born from a college writing class and transformed into a collaborative platform for showcasing talent, innovation, and the spirit of storytelling. 
 
@@ -19,8 +19,3 @@ This mock website replicates the essence of a professional news outlet:
 ## **Purpose**
 The goal of this project is not only to showcase our work but also to celebrate the power of collaboration and the art of journalism. It's a testament to what we can achieve when we combine our talents and push creative boundaries.
 
-## **Getting Started**
-If you'd like to explore the project locally:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/new_new_york_times.git
