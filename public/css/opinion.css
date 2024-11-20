@@ -310,16 +310,16 @@ hr {
 }
 
 p a {
-    color: #000000;
+    color: #586982;
     text-decoration: underline;
 }
 
 p a:visited {
-    color: #5d4967;
+    color: #816390;
 }
 
 p a:hover {
-    color: #424242;
+    color: #859faf;
     text-decoration: none;
 }
 
