@@ -1,4 +1,4 @@
-#The New New York Times
+# The New New York Times
 
 Welcome to **New New York Times**—a creative project born from a college writing class and transformed into a collaborative platform for showcasing talent, innovation, and the spirit of storytelling. 
 
