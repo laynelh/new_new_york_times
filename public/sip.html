@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT-Style Carousel with Fade-In Animation</title>
+    <link rel="stylesheet" href="/css/sip.css">
+</head>
+
+<body>
+    <div class="title-container">
+        <h1 id="center"><a href="https://www.nytimes.com/" style="text-decoration: none; color: black;">The New New York
+                Times</a></h1>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <!-- Main Sections -->
+            <div class="nav-section">
+                <a href="https://www.nytimes.com/section/us" class="nav-link">U.S.</a>
+            </div>
+            <div class="nav-section">
+                <a href="https://www.nytimes.com/section/world" class="nav-link">World</a>
+            </div>
+            <a href="https://www.nytimes.com/section/business" class="nav-link">Business</a>
+            <a href="https://www.nytimes.com/section/arts" class="nav-link">Arts</a>
+            <a href="https://www.nytimes.com/spotlight/lifestyle" class="nav-link">Lifestyle</a>
+            <a href="https://www.nytimes.com/section/opinion" class="nav-link">Opinion</a>
+
+            <!-- Separator -->
+            <span class="separator">|</span>
+
+            <!-- Secondary Sections -->
+            <a href="https://www.nytimes.com/spotlight/podcasts" class="nav-link">Audio</a>
+            <a href="https://www.nytimes.com/crosswords" class="nav-link">Games</a>
+            <a href="https://cooking.nytimes.com/" class="nav-link">Cooking</a>
+            <a href="https://www.nytimes.com/wirecutter/" class="nav-link">Wirecutter</a>
+            <a href="https://www.nytimes.com/athletic/" class="nav-link">The Athletic</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h1 class="article-title" style="font-family: 'Chelt', serif;">Semester in Pictures
+        </h1>
+
+        <div class="carousel">
+            <div class="carousel-track" id="carousel-track">
+                <div class="carousel-slide active">
+                    <div class="carousel-image" style="background-color: #f0f0f0;"></div>
+                    <div class="carousel-description">This is the description for Slide 1.</div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-image" style="background-color: #e9ecef;"></div>
+                    <div class="carousel-description">This is the description for Slide 2.</div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-image" style="background-color: #dee2e6;"></div>
+                    <div class="carousel-description">This is the description for Slide 3.</div>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button" id="prev">‹</button>
+                <button class="carousel-button" id="next">›</button>
+            </div>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+    <footer>
+        &copy; 2024 The New New York Times. All rights reserved.
+    </footer>
+
+    <script src="/js/sip.js"></script>
+
+</body>
+
+</html>
